@@ -1,0 +1,13 @@
+{
+  "name": "apex_wsgi_sample",
+  "description": "Sample project of apex with wsgi framework.",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::039055261558:role/apex_wsgi_sample_lambda_function",
+  "environment": {},
+  "runtime": "python3.6",
+  "handler": "main.lambda_handler",
+  "hooks": {
+    "build": "cp -r ../../src/* . && pip install -r ../../requirements.txt -t ./vendor"
+  }
+}
