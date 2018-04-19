@@ -8,6 +8,6 @@
   "runtime": "python3.6",
   "handler": "main.lambda_handler",
   "hooks": {
-    "build": "cp -r ../../src/* . && pip install -r ../../requirements.txt -t ./vendor"
+    "build": "cp -r ../../src/* ./vendor && pip install -r ../../requirements.txt -t ./vendor"
   }
 }
